@@ -65,7 +65,7 @@ npm -v
 gulp -v
 ```
 
-`CLI version 1.x.x`のような表示が出た人は、gulp-cliがインストールされています。4にすすみます。
+`CLI version 1.x.x`のような表示が出た人は、gulp-cliがインストールされています。
 
 gulpをインストールするのが初めての人は以下のようになると思います。
 ![](/readme-assets/gulp-install/gulp-v-false.gif)
