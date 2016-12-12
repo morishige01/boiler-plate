@@ -6,3 +6,7 @@ gulp.task('ejs',()=>{
     .pipe(ejs('', {"ext": ".html"}))
     .pipe(gulp.dest("./dist"));
 });
+
+gulp.task('watch', function(){
+  gulp.watch('./src/scss/*.scss', ['sass']);
+});

@@ -1,5 +1,4 @@
-##使い方
+# How to use
 
-1.ローカルに落とす
-
-`git clone `
+1.ターミナルを開く
+![](readme-assets/openterminal.gif)
