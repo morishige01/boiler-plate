@@ -5,6 +5,7 @@ const sass         = require('gulp-sass');
 const plumber      = require('gulp-plumber');
 const notify       = require('gulp-notify');
 const autoprefixer = require('gulp-autoprefixer');
+const webserver    = require('gulp-webserver');
 
 // ejs compile
 gulp.task('ejs',()=>{
@@ -26,7 +27,20 @@ gulp.task('sass',()=>{
     .pipe(gulp.dest("./dist/css"));
 });
 
-gulp.task('default', function(){
+
+// local server
+gulp.task('webserver', ()=>{
+    gulp.src("./dist") // 公開したい静的ファイルを配置したディレクトリを指定する
+        .pipe(webserver({
+            host: 'localhost',
+            port: 8000,
+            livereload: true
+        }));
+});
+
+gulp.task('watch', ()=>{
   gulp.watch('./src/scss/*.scss', ['sass']);
   gulp.watch('./src/ejs/*.ejs', ['ejs']);
 });
+
+gulp.task('default',['watch','webserver']);
