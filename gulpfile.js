@@ -39,7 +39,7 @@ gulp.task('webserver', ()=>{
 });
 
 gulp.task('watch', ()=>{
-  gulp.watch('./src/scss/*.scss', ['sass']);
+  gulp.watch('./src/scss/**/*.scss', ['sass']);
   gulp.watch('./src/ejs/**/*.ejs', ['ejs']);
 });
 
