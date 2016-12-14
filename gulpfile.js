@@ -40,7 +40,7 @@ gulp.task('webserver', ()=>{
 
 gulp.task('watch', ()=>{
   gulp.watch('./src/scss/*.scss', ['sass']);
-  gulp.watch('./src/ejs/*.ejs', ['ejs']);
+  gulp.watch('./src/ejs/**/*.ejs', ['ejs']);
 });
 
 gulp.task('default',['watch','webserver']);
